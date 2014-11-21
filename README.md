@@ -368,6 +368,7 @@ One-line conditionals with greater than 3 conditions should be converted to mult
 
   # No
   doSomething() if x > 5 and y < 7 and x isnt 12 and (x+y) isnt not 52
+```
 
 <a name="looping_and_comprehensions"/>
 ## Looping and Comprehensions
