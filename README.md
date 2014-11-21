@@ -49,7 +49,7 @@ The details in this guide have been very heavily inspired by several existing st
 <a name="tabs_or_spaces"/>
 ### Tabs or Spaces?
 
-Use **spaces only**, with **2 spaces** per indentation level. Never mix tabs and spaces.
+Use **spaces only**, with **4 spaces** per indentation level. Never mix tabs and spaces.
 
 <a name="maximum_line_length"/>
 ### Maximum Line Length
@@ -310,7 +310,7 @@ In cases where method calls are being chained, some adopters of this style prefe
 (($ '#selektor').addClass 'klass').hide() # All calls
 ```
 
-The function grouping style is not recommended. However, **if the function grouping style is adopted for a particular project, be consistent with its usage.**
+The function grouping style is not recommended, and is not used in MyFarms projects. However, **if the function grouping style is adopted for a particular project, be consistent with its usage.**
 
 <a name="strings"/>
 ## Strings
@@ -358,6 +358,16 @@ Multi-line if/else clauses should use indentation:
   if true then ...
   else ...
 ```
+
+One-line conditional executions are allowed, provided they do not overrun the maximum line length.
+One-line conditionals with greater than 3 conditions should be converted to multi-line conditionals.
+
+```coffeescript
+  # Yes
+  doSomething() if not somethingBlocked
+
+  # No
+  doSomething() if x > 5 and y < 7 and x isnt 12 and (x+y) isnt not 52
 
 <a name="looping_and_comprehensions"/>
 ## Looping and Comprehensions
